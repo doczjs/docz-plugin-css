@@ -91,7 +91,7 @@ const applyRule = (
   cssmodules: boolean | undefined,
   dev: boolean
 ) => {
-  const { preprocessor, cssOpts, loaderOpts } = opts
+  const { preprocessor, cssOpts, loaderOpts, ruleOpts } = opts
 
   const loaderfn = loaders[preprocessor as PreProcessor]
   const loader = loaderfn(loaderOpts)
@@ -105,6 +105,7 @@ const applyRule = (
   return {
     test: tests[preprocessor as PreProcessor],
     use: loader(cssoptions, dev),
+    ...ruleOpts,
   }
 }
 
@@ -113,6 +114,7 @@ export interface CSSPluginOptions {
   cssmodules?: boolean
   loaderOpts?: Opts
   cssOpts?: Opts
+  ruleOpts?: Opts
 }
 
 const defaultOpts: Record<string, any> = {
@@ -120,6 +122,7 @@ const defaultOpts: Record<string, any> = {
   cssmodules: false,
   loadersOpts: {},
   cssOpts: {},
+  ruleOpts: {},
 }
 
 export const css = (opts: CSSPluginOptions = defaultOpts) =>

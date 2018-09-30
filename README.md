@@ -142,3 +142,9 @@ Custom options passed on pre-processor loader configuration
 - **Default:** `{}`
 
 Custom options passed on [css-loader](https://github.com/webpack-contrib/css-loader) configuration
+
+#### `ruleOpts`
+- **Type:** `{ [key:string]: any }`
+- **Default:** `{}`
+
+Custom options passed on webpack rule configuration
