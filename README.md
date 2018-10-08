@@ -98,6 +98,8 @@ Example of Button component with custom class!
 
 If you don't pass `.module` in front of the preprocessor extension, bundler will don't parse your css as cssmodule!
 
+If in your project some places use both CSS modules and some place doesn't, you can leave out the `cssmodules` option so that `webpack` can determined by itself the correct way to load the CSS.
+
 ### Multiple pre-processor
 
 You can still use multiple pre-processor together in the same configuration:
