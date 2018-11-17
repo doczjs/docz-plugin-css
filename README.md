@@ -6,12 +6,12 @@ Docz plugin to parse css files inside your documents
 
 ## Examples
 
-- [PostCSS](https://github.com/pedronauck/docz/tree/master/examples/css-postcss)
-- [Less](https://github.com/pedronauck/docz/tree/master/examples/css-less)
-- [Sass](https://github.com/pedronauck/docz/tree/master/examples/css-sass)
-- [Stylus](https://github.com/pedronauck/docz/tree/master/examples/css-stylus)
+- [PostCSS](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-postcss)
+- [Less](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-less)
+- [Sass](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-sass)
+- [Stylus](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-stylus)
 
-## Instalation
+## Installation
 
 First of all, install plugin:
 
