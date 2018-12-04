@@ -88,19 +88,22 @@ const loaders = {
 
 const applyRule = (
   opts: CSSPluginOptions,
-  cssmodules: boolean | undefined,
+  cssmodules: boolean | undefined, // if cssmodules === undefined, then let webpack decide whether to use CSS modules by itself
   dev: boolean
 ) => {
   const { preprocessor, cssOpts, loaderOpts, ruleOpts } = opts
 
   const loaderfn = loaders[preprocessor as PreProcessor]
   const loader = loaderfn(loaderOpts)
-  const cssoptions = merge(cssOpts, {
-    importLoaders: 1,
-    modules: cssmodules,
-    sourceMap: !dev,
-    ...(cssmodules && { getLocalIdent }),
-  })
+  const cssoptions = merge(
+    cssOpts,
+    {
+      importLoaders: 1,
+      sourceMap: !dev,
+      ...(cssmodules && { getLocalIdent }),
+    },
+    typeof cssmodules === 'boolean' ? { modules: cssmodules } : {}
+  )
 
   return {
     test: tests[preprocessor as PreProcessor],
@@ -119,7 +122,7 @@ export interface CSSPluginOptions {
 
 const defaultOpts: Record<string, any> = {
   preprocessor: 'postcss',
-  cssmodules: false,
+  cssmodules: undefined,
   loadersOpts: {},
   cssOpts: {},
   ruleOpts: {},
