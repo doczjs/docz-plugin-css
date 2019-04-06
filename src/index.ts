@@ -69,7 +69,7 @@ const loaders = {
   sass: (opts: Opts = {}) =>
     getStyleLoaders(
       require.resolve('sass-loader'),
-      merge(opts, { indentedSyntax: false })
+      merge({ indentedSyntax: false }, opts)
     ),
 
   less: (opts: Opts = {}) =>
