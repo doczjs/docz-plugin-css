@@ -101,8 +101,8 @@ const applyRule = (
       importLoaders: 1,
       sourceMap: !dev,
       ...(cssmodules && { getLocalIdent }),
-    },
-    typeof cssmodules === 'boolean' ? { modules: cssmodules } : {}
+      ...(typeof cssmodules === 'boolean' ? { modules: cssmodules } : {})
+    }
   )
 
   return {
