@@ -8,6 +8,14 @@
   "module": "dist/index.m.js",
   "typings": "dist/index.d.ts",
   "source": "src/index.ts",
+  "homepage": "https://docz.site",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pedronauck/docz-plugin-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pedronauck/docz-plugin-css/issues"
+  },
   "files": [
     "dist/",
     "package.json",
