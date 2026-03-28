@@ -8,6 +8,14 @@
   "module": "dist/index.m.js",
   "typings": "dist/index.d.ts",
   "source": "src/index.ts",
+  "homepage": "https://docz.site",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pedronauck/docz-plugin-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pedronauck/docz-plugin-css/issues"
+  },
   "files": [
     "dist/",
     "package.json",
@@ -30,7 +38,7 @@
     "less-loader": "^4.1.0",
     "loader-utils": "^1.1.0",
     "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss": "^7.0.2",
     "postcss-flexbugs-fixes": "^4.1.0",
